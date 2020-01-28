@@ -4,6 +4,7 @@ import './styles.css';
 class SelectBox extends React.Component{
 
     state = {
+        ...this.props,
         items: this.props.items || [],
         showItems:false,
         selectedItem : this.props.items && this.props.items[0],
@@ -42,7 +43,8 @@ class SelectBox extends React.Component{
                             {item.value}
                         </div>)
                     }
-                    </div>
+                </div>
+                <input type="hidden" value={this.state.selectedItem.id} className="value-select" />
             </div>
 
         );
