@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , {Component} from 'react';
+import SelectBox from './features/select-box/index';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <>
+      <h1>Custom select box using reactjs</h1>
+      <div style={{margin:'16px', position:'relative'}}>
+          <SelectBox
+            items={[
+                {value:'United states', id:'1'},
+                {value:'Brazil', id:'2'},
+                {value:'States', id:'3'},
+            ]}
+              />
+
+      </div>
+      </>
+    )
+  }
 }
 
 export default App;
